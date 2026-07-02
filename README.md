@@ -4,6 +4,21 @@ This project aims to develop a predictive system that determines the quality of 
 
 ---
 
+## Dataset Source
+
+The pipeline trains and validates models using the public [Kaggle Milk Quality Prediction Dataset](https://www.kaggle.com/datasets/cpluzshrijayan/milkquality) shared by Shrijayan. The dataset includes 1,050 manual observations across 7 distinct physical characteristics to classify final grades.
+
+---
+
+## Project Features
+
+* Data Cleaning: Screens the dataset for invalid inputs and handles extreme outliers in the pH column using the Interquartile Range method.
+* Feature Engineering: Creates binary freshness and thickness indicators using raw turbidity and fat values.
+* Leakage Prevention: Splits the data into training and validation sets before applying SMOTE oversampling to keep evaluation scores honest and realistic.
+* Modeling: Evaluates multiple classification models, selecting a tuned Random Forest classifier as the optimal framework.
+
+---
+
 ## Preprocessing and Exploratory Data Analysis
 
 ### Missing Data Check
@@ -28,9 +43,19 @@ A correlation matrix was computed to observe the linear relationships between th
 
 ---
 
+## Technical Stack
+
+* Python 
+* Pandas and NumPy
+* Scikit-Learn
+* Imbalanced-Learn
+* Matplotlib and Seaborn
+
+---
+
 ## Performance Matrix
 
-Six machine learning frameworks were evaluated using an 80/20 train-test split configuration. The hyperparameter-tuned Random Forest ensemble delivered the most stable generalization metrics on unseen data.
+We evaluated six supervised frameworks using an 80/20 train-test split configuration. The hyperparameter-tuned Random Forest ensemble delivered optimal classification capacity.
 
 | Supervised Framework | Test Accuracy | Weighted F1-Score | ROC-AUC |
 | :--- | :---: | :---: | :---: |
@@ -43,6 +68,30 @@ Six machine learning frameworks were evaluated using an 80/20 train-test split c
 
 ---
 
+## Setup and Installation
+
+First, clone the repository to your local machine:
+```bash
+git clone https://github.com
+cd milk-quality-prediction
+```
+
+Install the necessary dependencies using pip:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Code
+
+To execute the data pipeline, train the models, and view the final test metrics, run the main script:
+```bash
+python pipeline.py
+```
+
+---
+
 ## Project Contributors
 
 * J.G.H. Jayalath
@@ -51,4 +100,3 @@ Six machine learning frameworks were evaluated using an 80/20 train-test split c
 * M.G.M. Sanvidu
 * S.A.W. Fernando
 * N. Thahani
-
