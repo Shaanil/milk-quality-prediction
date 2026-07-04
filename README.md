@@ -24,7 +24,7 @@ The pipeline trains and validates models using the public [Kaggle Milk Quality P
 ### Missing Data Check
 A heatmap validation was performed to confirm data completeness before training. The dataset contained no missing records.
 
-![Missing Data Heatmap](images/missing_data.png)
+![Missing Data Heatmap](results/eda_visualizations/missing_data_handling.png)
 
 ### Outlier Removal
 Extreme outliers in the pH distribution were identified and resolved using the Interquartile Range method to protect model stability.
