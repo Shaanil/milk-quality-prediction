@@ -34,7 +34,7 @@ Extreme outliers in the pH distribution were identified and resolved using the I
 ### Class Balancing (SMOTE)
 The target variable initially showed an unequal distribution of classes. Synthetic Minority Over-sampling Technique (SMOTE) was applied to ensure equal class representation.
 
-![Class Balance Before and After](images/distribution.png)
+![Class Balance Before and After](results/eda_visualizations/class balancing.png)
 
 ### Feature Selection
 A correlation matrix was computed to observe the linear relationships between the engineered physicochemical parameters and the final encoded milk grade.
